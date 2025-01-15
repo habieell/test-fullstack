@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "id": 1372,
+      "id": "1372",
       "productID": "10001",
       "productName": "Test 1",
       "amount": "1000",
@@ -12,7 +12,7 @@
       "createOn": "2022-07-10 11:14:52"
     },
     {
-      "id": 1373,
+      "id": "1373",
       "productID": "10002",
       "productName": "Test 2",
       "amount": "2000",
@@ -23,7 +23,7 @@
       "createOn": "2022-07-10 13:14:52"
     },
     {
-      "id": 1374,
+      "id": "1374",
       "productID": "10001",
       "productName": "Test 1",
       "amount": "1000",
@@ -34,7 +34,7 @@
       "createOn": "2022-07-10 12:14:52"
     },
     {
-      "id": 1375,
+      "id": "1375",
       "productID": "10002",
       "productName": "Test 2",
       "amount": "1000",
@@ -45,7 +45,7 @@
       "createOn": "2022-07-10 13:10:52"
     },
     {
-      "id": 1376,
+      "id": "1376",
       "productID": "10001",
       "productName": "Test 1",
       "amount": "1000",
@@ -56,7 +56,7 @@
       "createOn": "2022-07-10 13:11:52"
     },
     {
-      "id": 1377,
+      "id": "1377",
       "productID": "10002",
       "productName": "Test 2",
       "amount": "2000",
@@ -67,7 +67,7 @@
       "createOn": "2022-07-10 13:14:52"
     },
     {
-      "id": 1378,
+      "id": "1378",
       "productID": "10001",
       "productName": "Test 1",
       "amount": "1000",
@@ -78,7 +78,7 @@
       "createOn": "2022-07-10 14:11:52"
     },
     {
-      "id": 1379,
+      "id": "1379",
       "productID": "10002",
       "productName": "Test 2",
       "amount": "1000",
@@ -89,7 +89,7 @@
       "createOn": "2022-07-10 11:14:52"
     },
     {
-      "id": 1380,
+      "id": "1380",
       "productID": "10001",
       "productName": "Test 1",
       "amount": "1000",
@@ -100,7 +100,7 @@
       "createOn": "2022-07-10 13:14:52"
     },
     {
-      "id": 1381,
+      "id": "1381",
       "productID": "10002",
       "productName": "Test 2",
       "amount": "2000",
@@ -111,7 +111,7 @@
       "createOn": "2022-07-10 09:11:52"
     },
     {
-      "id": 1382,
+      "id": "1382",
       "productID": "10001",
       "productName": "Test 1",
       "amount": "1000",
@@ -122,7 +122,7 @@
       "createOn": "2022-07-10 10:14:52"
     },
     {
-      "id": 1383,
+      "id": "1383",
       "productID": "10002",
       "productName": "Test 2",
       "amount": "1000",
@@ -131,15 +131,26 @@
       "transactionDate": "2022-08-15 13:14:52",
       "createBy": "abc",
       "createOn": "2022-07-10 13:14:52"
+    },
+    {
+      "id": "2241",
+      "productID": "2241",
+      "productName": "Smart TV",
+      "amount": "5",
+      "customerName": "Agus Bntg",
+      "status": 1,
+      "createBy": "Joko",
+      "createOn": "2025-01-15T02:48:04.720Z",
+      "transactionDate": "2025-01-15T02:48:04.720Z"
     }
   ],
   "status": [
     {
-      "id": 0,
+      "id": "0",
       "name": "SUCCESS"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "FAILED"
     }
   ]
