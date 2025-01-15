@@ -12,7 +12,14 @@ export default function ProductList() {
   function getProducts() {
     fetch("http://localhost:4000/data")
       .then((response) => response.json())
-      .then((data) => setProducts(data))
+      .then((data) => {
+        // Format ulang tanggal sebelum menyimpan ke state
+        const formattedData = data.map((product) => ({
+          ...product,
+          transactionDate: product.transactionDate.split(" ")[0] // Ambil hanya YYYY-MM-DD
+        }));
+        setProducts(formattedData);
+      })
       .catch(() => alert("Unable to fetch products"));
   }
 
@@ -77,40 +84,22 @@ export default function ProductList() {
             <th onClick={() => sortData("id")} style={{ cursor: "pointer" }}>
               ID {getSortIcon("id")}
             </th>
-            <th
-              onClick={() => sortData("productID")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => sortData("productID")} style={{ cursor: "pointer" }}>
               ProductID {getSortIcon("productID")}
             </th>
-            <th
-              onClick={() => sortData("productName")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => sortData("productName")} style={{ cursor: "pointer" }}>
               Product Name {getSortIcon("productName")}
             </th>
-            <th
-              onClick={() => sortData("amount")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => sortData("amount")} style={{ cursor: "pointer" }}>
               Amount {getSortIcon("amount")}
             </th>
-            <th
-              onClick={() => sortData("customerName")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => sortData("customerName")} style={{ cursor: "pointer" }}>
               Customer Name {getSortIcon("customerName")}
             </th>
-            <th
-              onClick={() => sortData("status")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => sortData("status")} style={{ cursor: "pointer" }}>
               Status {getSortIcon("status")}
             </th>
-            <th
-              onClick={() => sortData("transactionDate")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => sortData("transactionDate")} style={{ cursor: "pointer" }}>
               Transaction Date {getSortIcon("transactionDate")}
             </th>
             <th>Actions</th>
@@ -125,25 +114,15 @@ export default function ProductList() {
               <td>{product.amount}</td>
               <td>{product.customerName}</td>
               <td>{product.status === 0 ? "SUCCESS" : "FAILED"}</td>
-              <td>{product.transactionDate}</td>
+              <td>{product.transactionDate}</td> {/* Sudah diformat hanya YYYY-MM-DD */}
               <td>
-                <Link
-                  className="btn btn-primary btn-sm me-1"
-                  to={"/admin/products/edit/" + product.id}
-                >
+                <Link className="btn btn-primary btn-sm me-1" to={"/admin/products/edit/" + product.id}>
                   Edit
                 </Link>
-                <Link
-                  className="btn btn-info btn-sm me-1"
-                  to={"/admin/products/detail/" + product.id}
-                >
+                <Link className="btn btn-success btn-sm me-1" to={"/admin/products/detail/" + product.id}>
                   Detail
                 </Link>
-                <button
-                  type="button"
-                  className="btn btn-danger btn-sm"
-                  onClick={() => deleteProduct(product.id)}
-                >
+                <button type="button" className="btn btn-danger btn-sm" onClick={() => deleteProduct(product.id)}>
                   Delete
                 </button>
               </td>

@@ -16,6 +16,14 @@ export default function ProductDetail() {
     return <div>Loading...</div>;
   }
 
+  // Pastikan format tanggal yang benar, tampilkan waktu jika tersedia
+  const transactionDate = product.transactionDate.includes("T")
+    ? new Date(product.transactionDate)
+        .toISOString()
+        .replace("T", " ")
+        .split(".")[0] // Format YYYY-MM-DD HH:MM:SS
+    : product.transactionDate; // Jika sudah benar, langsung tampilkan
+
   return (
     <div className="container my-4">
       <h2 className="text-center mb-4">Product Detail</h2>
@@ -37,11 +45,14 @@ export default function ProductDetail() {
       </div>
       <div className="row mb-3">
         <div className="col-sm-4">Status:</div>
-        <div className="col-sm-8">{product.status === 0 ? "SUCCESS" : "FAILED"}</div>
+        <div className="col-sm-8">
+          {product.status === 0 ? "SUCCESS" : "FAILED"}
+        </div>
       </div>
       <div className="row mb-3">
         <div className="col-sm-4">Transaction Date:</div>
-        <div className="col-sm-8">{product.transactionDate}</div>
+        <div className="col-sm-8">{transactionDate}</div>{" "}
+        {/* Menampilkan YYYY-MM-DD HH:MM:SS */}
       </div>
       <div className="row mb-3">
         <div className="col-sm-4">Create By:</div>

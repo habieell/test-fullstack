@@ -122,26 +122,15 @@
       "createOn": "2022-07-10 10:14:52"
     },
     {
-      "id": "1383",
-      "productID": "10002",
-      "productName": "Test 2",
-      "amount": "1000",
-      "customerName": "abc",
-      "status": 1,
-      "transactionDate": "2022-08-15 13:14:52",
-      "createBy": "abc",
-      "createOn": "2022-07-10 13:14:52"
-    },
-    {
-      "id": "2241",
-      "productID": "2241",
-      "productName": "Smart TV",
-      "amount": "5",
-      "customerName": "Agus Bntg",
-      "status": 1,
+      "productID": "1383",
+      "productName": "Kulkas",
+      "amount": "121",
+      "customerName": "Agus",
+      "status": 0,
       "createBy": "Joko",
-      "createOn": "2025-01-15T02:48:04.720Z",
-      "transactionDate": "2025-01-15T02:48:04.720Z"
+      "id": "1383",
+      "createOn": "2025-01-15 04:09:39",
+      "transactionDate": "2025-01-15 04:09:39"
     }
   ],
   "status": [
